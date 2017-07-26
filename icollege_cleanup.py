@@ -1,5 +1,6 @@
+#!/usr/bin/env python
 import os
 
 for fn in os.listdir("."):
-    if fn.detect("%20"):
+    if "%20" in fn:
         os.rename(fn, fn.replace("%20", "-"))
